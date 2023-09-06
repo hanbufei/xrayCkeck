@@ -39,7 +39,7 @@ func SelectPoc(Pocs embed.FS, pocname string) []string {
 	}
 	var foundFiles []string
 	for _, entry := range entries {
-		if strings.HasPrefix(entry.Name(), pocname+"-") {
+		if strings.HasPrefix(entry.Name(), pocname) {
 			foundFiles = append(foundFiles, entry.Name())
 		}
 	}
